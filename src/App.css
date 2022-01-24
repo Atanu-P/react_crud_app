@@ -66,3 +66,25 @@
   color: #aaa;
   font-size: 1.4em;
 }
+
+.add-item{
+  margin-top: 60px;
+  padding: 20px;
+  max-width: 500px;
+}
+.add-item h2{
+  font-size: 2em;
+  margin: 20px auto;
+}
+.add-item .field{
+  margin: 20px auto;
+  position: relative;
+}
+.add-item .delete{
+  position: absolute;
+  right: 0;
+  bottom: 16px;
+  color: #aaa;
+  font-size: 1.4em;
+  cursor: pointer;
+}

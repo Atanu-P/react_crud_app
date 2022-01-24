@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../firebase";
 
@@ -77,9 +78,11 @@ class Display extends Component {
                   ))}
                 </ul>
               </div>
-              <span className="btn-floating btn-large halfway-fab pink">
-                <i className="material-icons edit">edit</i>
-              </span>
+              <Link to="/editrecipe">
+                <span className="btn-floating btn-large halfway-fab pink">
+                  <i className="material-icons edit">edit</i>
+                </span>
+              </Link>
             </div>
           ))}
         </div>
