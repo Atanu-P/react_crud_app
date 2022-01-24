@@ -1,8 +1,17 @@
-# Getting Started with Create React App
+## CRUD app (This is simple app having basic functionality of Create, Read, Update, Delete)
+#### React + Firebase
+### 1) Add Items and its details
+### 2) Display all the added items in grid view
+### 3) Edit Item and its details
+### 4) Delete Item with confirmation
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Setup (Available Scripts)
 
 In the project directory, you can run:
 
