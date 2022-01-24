@@ -24,7 +24,7 @@ class Display extends Component {
     this.getData();
   }
   getData = async () => {
-    const querySnapshot = await getDocs(collection(db, "smoothies"));
+    const querySnapshot = await getDocs(collection(db, "recipes"));
     //console.log(querySnapshot);
 
     querySnapshot.forEach((recipe) => {
@@ -70,8 +70,8 @@ class Display extends Component {
                 </i>
                 <h2 className="indigo-text">{m.title}</h2>
                 <ul className="ingredients">
-                  {m.ingredients.map((i) => (
-                    <li key={i}>
+                  {m.ingredients.map((i, id) => (
+                    <li key={id}>
                       <span className="chip">{i}</span>
                     </li>
                   ))}
