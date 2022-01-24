@@ -1,28 +1,36 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
+import {
+  getDocs,
+  collection,
+  deleteDoc,
+  doc,
+  onSnapshot,
+  query,
+} from "firebase/firestore";
 import { db } from "../firebase";
 
 class Display extends Component {
   state = {
     recipes: [
-      {
-        title: "Brew",
-        slug: "brew",
-        ingredients: ["bananas", "coffee", "milk"],
-        id: "1",
-      },
-      {
-        title: "Juice",
-        slug: "juice",
-        ingredients: ["mango", "lime", "juice"],
-        id: "2",
-      },
+      // {
+      //   title: "Brew",
+      //   slug: "brew",
+      //   ingredients: ["bananas", "coffee", "milk"],
+      //   id: "1",
+      // },
+      // {
+      //   title: "Juice",
+      //   slug: "juice",
+      //   ingredients: ["mango", "lime", "juice"],
+      //   id: "2",
+      // },
     ],
   };
 
   componentDidMount() {
     this.getData();
+    document.title = "React CRUD app";
   }
   getData = async () => {
     const querySnapshot = await getDocs(collection(db, "recipes"));
@@ -37,11 +45,22 @@ class Display extends Component {
 
       this.setState({ recipes: recipes });
     });
+
+    // const q = query(collection(db, "recipes"));
+    // const onsnapshot1 = onSnapshot(q, (snapshot) => {
+    //   snapshot.docChanges().forEach((recipe) => {
+    //     let item = recipe.doc.data();
+    //     item.id = recipe.doc.id;
+    //     let recipes = [...this.state.recipes];
+    //     recipes.push(item);
+    //     this.setState({ recipes: recipes });
+    //   });
+    // });
   };
 
   handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this Recipe?")) {
-      await deleteDoc(doc(db, "smoothies", id));
+      await deleteDoc(doc(db, "recipes", id));
 
       //delete data inside array
       const recipes = this.state.recipes.filter((r) => r.id != id);
@@ -78,7 +97,10 @@ class Display extends Component {
                   ))}
                 </ul>
               </div>
-              <Link to="/editrecipe">
+              {/* {if(this.props.locat){
+
+              }} */}
+              <Link to={`/editrecipe/${m.id}`}>
                 <span className="btn-floating btn-large halfway-fab pink">
                   <i className="material-icons edit">edit</i>
                 </span>

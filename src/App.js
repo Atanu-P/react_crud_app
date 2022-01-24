@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/display" component={Display} />
           <Route exact path="/addrecipe" component={AddRecipe} />
-          <Route exact path="/editrecipe" component={EditRecipe} />
+          <Route exact path="/editrecipe/:id" component={EditRecipe} />
           <Redirect from="/" exact to="/display" />
         </Switch>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}

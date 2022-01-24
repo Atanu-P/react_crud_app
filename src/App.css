@@ -67,6 +67,10 @@
   font-size: 1.4em;
 }
 
+.index .delete:hover{
+  color: rgb(2, 2, 2);
+}
+
 .add-item{
   margin-top: 60px;
   padding: 20px;
@@ -87,4 +91,16 @@
   color: #aaa;
   font-size: 1.4em;
   cursor: pointer;
+}
+.add-item .delete:hover{
+  color: rgb(5, 5, 5);
+}
+
+img{
+  width: 2.7%;
+  height: 2.7% !important;
+}
+
+.card:hover{
+  background-color:rgba(245, 244, 244, 0.993)
 }

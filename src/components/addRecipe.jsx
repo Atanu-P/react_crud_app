@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import slugify from "slugify";
 import { db } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
+import react from "react";
+import { Redirect } from "react-router-dom";
 
 class AddRecipe extends Component {
   state = {
@@ -67,7 +69,8 @@ class AddRecipe extends Component {
         ingredients: this.state.data.ingredients,
         slug: this.state.data.slug,
       });
-      this.props.history.push("/display ");
+      // this.props.history.push("/display ");
+      window.location.pathname = "/display";
     }
   };
 
@@ -79,7 +82,7 @@ class AddRecipe extends Component {
     //   }
     // });
     return (
-      <div>
+      <react.Fragment>
         <div className="add-item container">
           <h4 className="center-align indigo-text">Add New Recipe</h4>
           <form onSubmit={this.submitRecipe}>
@@ -135,7 +138,7 @@ class AddRecipe extends Component {
             </div>
           </form>
         </div>
-      </div>
+      </react.Fragment>
     );
   }
 }
