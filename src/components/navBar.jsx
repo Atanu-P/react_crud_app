@@ -17,12 +17,14 @@ class Navbar extends Component {
             </Link>
             <Link
               to="/display"
+              title="List of Recipes"
               className="btn-floating btn-large halfway-fab pink waves-effect left">
               <i className="material-icons">apps</i>
             </Link>
 
             <NavLink
               to="/addrecipe"
+              title="Add new Recipes"
               className="btn-floating btn-large halfway-fab pink waves-effect">
               <i className="material-icons">add</i>
             </NavLink>

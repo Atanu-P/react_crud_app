@@ -85,22 +85,21 @@ class Display extends Component {
               <div className="card-content">
                 <i
                   className="material-icons delete"
+                  title="Delete Recipe"
                   onClick={() => this.handleDelete(m.id)}>
                   delete
                 </i>
                 <h2 className="indigo-text">{m.title}</h2>
                 <ul className="ingredients">
                   {m.ingredients.map((i, id) => (
-                    <li key={id}>
+                    <li key={id} title="Ingredient">
                       <span className="chip">{i}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              {/* {if(this.props.locat){
 
-              }} */}
-              <Link to={`/editrecipe/${m.id}`}>
+              <Link to={`/editrecipe/${m.id}`} title="Edit Recipe">
                 <span className="btn-floating btn-large halfway-fab pink">
                   <i className="material-icons edit">edit</i>
                 </span>
