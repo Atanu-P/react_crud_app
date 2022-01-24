@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../logo";
+import logo from "../logo.svg";
 
 class Navbar extends Component {
   state = {};
