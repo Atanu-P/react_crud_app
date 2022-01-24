@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Display from "./components/display";
 import AddRecipe from "./components/addRecipe";
 import EditRecipe from "./components/editRecipe";
-import Navbar from "./navBar";
+import Navbar from "./components/navBar";
 import "./App.css";
 import react from "react";
 
