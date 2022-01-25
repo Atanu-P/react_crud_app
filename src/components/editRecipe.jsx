@@ -28,7 +28,7 @@ class EditRecipe extends Component {
 
     this.setState({ data: data });
 
-    console.log(data, "handle change");
+    // console.log(data, "handle change");
   };
 
   addIngredients = (e) => {
@@ -40,16 +40,16 @@ class EditRecipe extends Component {
       obj["ingredients"].push(value);
       this.setState({ obj: obj });
       document.querySelector("#ingredients").value = "";
-      console.log(obj, e);
+      // console.log(obj, e);
     }
   };
 
   deleteIngredients = (e) => {
-    console.log(e, "delete");
+    // console.log(e, "delete");
     const ingredients = this.state.data.ingredients.filter((i, id) => id !== e);
     let obj = this.state.data;
     obj["ingredients"] = [...ingredients];
-    console.log(obj, "filter");
+    // console.log(obj, "filter");
     this.setState({ obj: obj });
   };
 

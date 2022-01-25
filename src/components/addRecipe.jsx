@@ -28,7 +28,7 @@ class AddRecipe extends Component {
 
     this.setState({ data: data });
 
-    console.log(data, "handle change");
+    // console.log(data, "handle change");
   };
 
   addIngredients = (e) => {
@@ -40,7 +40,7 @@ class AddRecipe extends Component {
       obj["ingredients"].push(value);
       this.setState({ obj: obj });
       document.querySelector("#ingredients").value = "";
-      console.log(obj, e);
+      // console.log(obj, e);
     }
   };
 
@@ -49,7 +49,7 @@ class AddRecipe extends Component {
     const ingredients = this.state.data.ingredients.filter((i, id) => id !== e);
     let obj = this.state.data;
     obj["ingredients"] = [...ingredients];
-    console.log(obj, "filter");
+    // console.log(obj, "filter");
     this.setState({ obj: obj });
   };
 
@@ -75,12 +75,8 @@ class AddRecipe extends Component {
   };
 
   render() {
-    console.log(this.state.data, this.state.feedback);
-    // document.querySelector("#title").onKeyDown((e) => {
-    //   if (e.key === "Enter") {
-    //     e.preventDefault();
-    //   }
-    // });
+    // console.log(this.state.data, this.state.feedback);
+
     return (
       <react.Fragment>
         <div className="add-item container">

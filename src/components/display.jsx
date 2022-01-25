@@ -64,10 +64,10 @@ class Display extends Component {
 
       //delete data inside array
       const recipes = this.state.recipes.filter((r) => r.id != id);
-      console.log(recipes);
+      // console.log(recipes);
 
       this.setState({ recipes: recipes });
-      console.log(id, "deleted");
+      // console.log(id, "deleted");
     } else {
       // Do nothing!
       console.log("Cancel delete");
@@ -75,7 +75,7 @@ class Display extends Component {
   };
 
   render() {
-    console.log(this.state.recipes);
+    // console.log(this.state.recipes);
     return (
       <div className="container">
         <h4 className="center-align indigo-text">List of Recipe</h4>
